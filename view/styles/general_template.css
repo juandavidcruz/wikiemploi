@@ -1,0 +1,31 @@
+body {
+  padding-top: 50px;
+}
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+
+.form-centered{
+	padding: 40px 15px;
+	width: 60%;
+}
+
+.flushright{
+	float:right;
+}
+
+.avatar{
+	width:auto;
+	height:50px;
+}
+
+.row-centered{
+	margin:0;
+	vertical-align:middle;
+	text-align:center;
+}
+
+.text-cv{
+	height:75;
+}

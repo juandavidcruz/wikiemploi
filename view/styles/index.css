@@ -1,0 +1,38 @@
+header {
+  float:top;
+  background-color:red;
+  position: relative;
+}
+
+nav {
+  float:left;
+  background-color:blue;
+  position: relative;
+}
+
+body {
+float:center;
+    font-family: arial, helvetica, sans-serif;
+    font-size: 14px;
+    color: black;
+    background-color: #ffc;
+    margin: 20px;
+    padding: 0;
+}
+
+footer{
+  float:bottom;
+  background-color:green;
+}
+
+article {
+  float:relative;
+  height:120pt;
+  background-color:white;
+}
+
+section{
+  width:30%;
+  float:relative;
+  background-color:red;
+}
