@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
-    <title>Register page</title>
+    <title>Cover letter creation</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
@@ -18,58 +18,58 @@
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <!--<link href="ckeditor/contents.css" rel="stylesheet">-->
+    <script src="ckeditor/ckeditor.js"></script>
   </head>
   <body>
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
-        <div class="navbar-header"> <button type="button" class="navbar-toggle"
+        <div class="navbar-header"> 
+        	<button type="button" class="navbar-toggle"
             data-toggle="collapse"
             data-target=".navbar-collapse">
             <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span>
             <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-          <a class="navbar-brand" href="#">Social CV</a> </div>
-        <div class="collapse navbar-collapse">
+          <a class="navbar-brand" href="#">Social CV</a> 
+        </div>
+        <div class="collapse navbar-collapse navbar-left">
           <ul class="nav navbar-nav">
-            <li><a href="index.html">Home</a></li>
-            <!--href="#": para ruby... -->
+            <li class="active"><a href="#">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
+        </div>
+        <div class="collapse navbar-collapse navbar-right col-md-4">
+        	<div class="row row-centered">
+			<a href="#" class="btn col-md-3 nav navbar-nav">Username</a>
+	        <img src="images/avatar.png" class="avatar nav navbar-nav col-md-3">
+	        <a href="#" class="btn col-md-3 nav navbar-nav">Messages</a>
+	        <a href="index.tpl" class="btn col-md-3 nav navbar-nav">Logout</a>
+	        </div>
         </div>
         <!--/.nav-collapse --> </div>
     </div>
     <div class="container">
       <div class="starter-template">
-        <h1>Create a new CV</h1>
-        <p class="lead">Thanks for creating your CV with us. You can do it as a
-          registered user or as anonymous visitor.<br>
-          In both cases we will not store personal or other information that is
-          not critical. <a href="#">Learn more.</a></p>
-      </div>
-      <div class="row">
-        <div class="col-md-3 col-md-offset-2">
-          <p class="text-center"><strong>Continue as an anonymous user</strong></p>
-          <p class="text-justify">You can create your CV as an anonymous user
-            however you have to keep track of all your object by yourself.
-            Additionally, you may not receive exciting news and updates from the
-            community.</p>
-          <p class="text-right"><a href="create_cv.html" class="btn btn-success btn-large">Create
-              your CV</a></p>
-        </div>
-        <div class="col-md-3 col-md-offset-2">
-          <p class="text-center"><strong>Continue as a registered user</strong></p>
-          <form role="form" action="account.html" method="get">
-            <div class="form-group"> <input placeholder="Email" class="form-control"
-                name="username"
-                type="text">
-            </div>
-            <div class="form-group"> <input placeholder="Password" class="form-control"
-                name="passwd"
-                type="password">
-            </div>
-            <p class="text-right"><button type="submit" class="btn btn-success">Sign
-                in</button> <a href="register.html" class="btn btn-primary">Register</a></p>
-          </form>
+        <h1>Create your cover letter</h1>
+        <p class="lead text-center">Here you can create a cover letter using a rich text editor. <br>You can write and/or 
+        paste the text from other editors.</p>
+        <div class="row">
+	        <form class="horizontal-form" role="form" action="#doreg" name="cv-form" method="post">
+			<div class="col-md-1">&nbsp;</div>
+        	<div class="col-md-8">
+        		<textarea name="ml-editor" id="ml-editor" class="form-control ckeditor" rows="10"></textarea>
+        		<script>
+                	CKEDITOR.replace( 'ml-editor' );
+            	</script>
+        	</div>
+        	<div class="col-md-3">
+        		<p><a hraf="#" class="btn btn-success">Publish</a></p>
+        		<p><a hraf="#" class="btn btn-info">Save as draft</a></p>
+        		<p><a hraf="#" class="btn btn-info">Discard</a></p>
+        		<p><a hraf="#" class="btn btn-info">Help</a></p>
+        	</div>
+        	</form>
         </div>
       </div>
       <hr>

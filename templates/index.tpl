@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Social CV project - We have to change this title</title>
     <!-- Bootstrap -->
-    <link href="styles/css/bootstrap.min.css" rel="stylesheet">
+    {block name="css"}
+    <link href="templates/styles/css/bootstrap.min.css" rel="stylesheet">
+    {/block}
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -86,7 +88,7 @@
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="styles/js/bootstrap.min.js"></script>
+    <script src="templates/styles/js/bootstrap.min.js"></script>
     
   </body>
 </html>
