@@ -26,8 +26,8 @@
           	<a class="navbar-brand" href="#">Social CV project</a> 
         </div>
         <div class="navbar-collapse collapse">
-          <form class="navbar-form navbar-right" role="form" action="account.html"
-            method="get">
+          <form class="navbar-form navbar-right" role="form" action="login.php"
+            method="post">
             <div class="form-group"> <input placeholder="Email" class="form-control"
                 name="username"
                 type="text">
@@ -36,8 +36,8 @@
                 name="passwd"
                 type="password">
             </div>
-            <button type="submit" class="btn btn-success">Sign in</button> 
-            <a href="register.html" class="btn btn-primary">Register</a> </form>
+            <button type="submit" class="btn btn-success">Sign in</button>
+            <a href="register.php" class="btn btn-primary">Register</a> </form>
         </div>
         <!--/.navbar-collapse --> </div>
     </div>

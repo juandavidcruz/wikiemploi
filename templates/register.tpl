@@ -9,9 +9,9 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
     <!-- Bootstrap core CSS -->
-    <link href="styles/css/bootstrap.min.css" rel="stylesheet">
+    <link href="templates/styles/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom styles for this template -->
-    <link href="styles/general_template.css" rel="stylesheet">
+    <link href="templates/styles/general_template.css" rel="stylesheet">
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -97,6 +97,6 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="styles/js/bootstrap.min.js"></script>
+    <script src="templates/styles/js/bootstrap.min.js"></script>
   </body>
 </html>
