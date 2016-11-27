@@ -5,4 +5,3 @@ include('administrer/files/fonctions_erreurs.php');
 include($parent_back . 'includes/templates_initialise.php');
 $smarty->display($template_file_name);
 include($parent_back . 'includes/execution_time_display.php');
-?>

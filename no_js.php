@@ -10,4 +10,3 @@ S'il vous plaît, veuillez l\'activer pour ce site puis revenir sur cette page. S
 <br/><br/>
 Merci de votre compréhension.
 ');
-?>

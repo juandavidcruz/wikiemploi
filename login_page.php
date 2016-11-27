@@ -6,4 +6,3 @@ $page_description='<meta name="description" content="Se connecter">';
 
 include($parent_back . 'includes/templates_initialise.php');
 $smarty->display($template_file_name);
-?>
