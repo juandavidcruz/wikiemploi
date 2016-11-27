@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-27 15:09:47
+/* Smarty version 3.1.30, created on 2016-11-27 15:47:30
   from "/Users/juandavidcruzgomez/PhpstormProjects/wikiemploi/templates/home.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_583ae92b832672_76134247',
+  'unifunc' => 'content_583af2021e6134_63795392',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f2a26fdd6726d6b4dbeae5d7925e032d6932ba29' => 
     array (
       0 => '/Users/juandavidcruzgomez/PhpstormProjects/wikiemploi/templates/home.tpl',
-      1 => 1480255782,
+      1 => 1480258049,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_583ae92b832672_76134247 (Smarty_Internal_Template $_smarty_tpl) {
+function content_583af2021e6134_63795392 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE HTML>
 <html lang="fr-FR">
@@ -43,23 +43,12 @@ function content_583ae92b832672_76134247 (Smarty_Internal_Template $_smarty_tpl)
 
         </div>->
         <!-- Les menus -->
-        <div id="menu" class="menu">
+        <!-- <div id="menu" class="menu">
             <?php echo $_smarty_tpl->tpl_vars['menu']->value;?>
 
-        </div>
+        </div>-->
         <!-- Le corps -->
         <div id="contenu" class="contenu">
-            <!--<?php echo $_smarty_tpl->tpl_vars['rechercher']->value;?>
-
-            <h1>Wiki emploi - Accueil&nbsp;</h1>
-            <p>
-                Ceci est la page d'accueil du site.
-                <br/>
-                Pour naviguer au travers de ce site, veuillez utiliser le menu à gauche qui vous permettra d'accéder aux
-                différentes informations.
-                <br/>
-                Bonne visite.
-            </p>-->
             <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
                 <div class="container">
                     <div class="navbar-header">
@@ -73,24 +62,22 @@ function content_583ae92b832672_76134247 (Smarty_Internal_Template $_smarty_tpl)
                     <div class="navbar-collapse collapse">
                         <?php echo $_smarty_tpl->tpl_vars['rechercher']->value;?>
 
+                        <?php echo $_smarty_tpl->tpl_vars['logout']->value;?>
+
                     </div>
                     <!--/.navbar-collapse --> </div>
             </div>
-            <div class="starter-template">
-                <h1>Welcome </h1>
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Welcome </h1>
+                </div>
             </div>
             <div class="row">
                 <div class="col-md-3">
                     <p class="text-center"><h3>Actions</h3></p>
-                    <div>
-                        <ul class="list-unstyled">
-                            <li><a class="btn btn-link" href="create_cv.html">Create a CV</a></li>
-                            <li><a class="btn btn-link" href="#lm">Publish a cover letter</a></li>
-                            <li><a class="btn btn-link" href="#ex">Search examples</a></li>
-                            <li><a class="btn btn-link" href="#obj">Go to my objects</a></li>
-                            <li><a class="btn btn-link" href="#sus">Go to my suscriptions</a></li>
-                            <li><a class="btn btn-link" href="#other">Other tools</a></li>
-                        </ul>
+                    <div class="list-unstyled">
+                        <?php echo $_smarty_tpl->tpl_vars['menu']->value;?>
+
                     </div>
                 </div>
                 <div class="col-md-9">

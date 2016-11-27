@@ -16,7 +16,7 @@ include($parent_back . 'includes/templates_initialise.php');
 
 $user = new USER();
 
-if(isset($user) && $user->is_loggedin()!="")
+if($user->is_loggedin()!="")
 {
     $user->redirect('home.php');
 }

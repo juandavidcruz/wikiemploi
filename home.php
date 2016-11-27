@@ -27,6 +27,4 @@ $stmt = $conn->prepare("SELECT * FROM utilisateurs WHERE id_utilisateur=:user_id
 $stmt->execute(array(":user_id"=>$user_id));
 $userRow=$stmt->fetch(PDO::FETCH_ASSOC);
 
-var_dump($userRow);
-
 $smarty->display($template_file_name);

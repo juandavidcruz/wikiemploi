@@ -38,6 +38,8 @@ $js.='
 <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> -->
 <script src="' . $parent_back . 'js/jquery-1.11.0.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://use.fontawesome.com/799403003e.js"></script>
+
 ';
 
 $ligne_body.='
@@ -118,17 +120,17 @@ $googleplus_like='<div id="gplus" class="g-plusone" data-size="tall"></div>
 $googleplus_like_call='gapi.plusone.go();';
 
 // Variable du formulaire de recherche
-$formulaire_recherche='<div id="rechercher" name="rechercher">
+$formulaire_recherche='<div id="rechercher" name="rechercher" class="navbar-form navbar-right">
 <form name="frm_recherche" id="frm_recherche" method="get" action="' . $parent_back . 'recherche.php">
-<br/>
+<!--<br/>
 <p>Rechercher sur le site.</p>
-<br/>
-<label for="txt_rechercher">Chercher:
-<input type="text" id="txt_rechercher" name="txt_rechercher">
-</label>
-<br/>
-<label for="lst_type_recherche">Recherche dans:
-<!--<select id="lst_type_recherche" name="lst_type_recherche">
+<br/>-->
+<!--<label for="txt_rechercher">Chercher:-->
+<input type="text" id="txt_rechercher" placeholder="Rechercher sur le site" name="txt_rechercher">
+<!--</label>
+<br/>-->
+<!--<label for="lst_type_recherche">Recherche dans:
+<select id="lst_type_recherche" name="lst_type_recherche">
 <option value="1">Demandes d\'aide</option>
 <option value="2">Articles du wiki</option>
 
@@ -141,7 +143,10 @@ $formulaire_recherche='<div id="rechercher" name="rechercher">
 </select>
 </label>
 <br/>-->
-<input type="submit" id="btn_recherche" value="Rechercher"><i class="fa fa-search" aria-hidden="true"></i>
+<input type="submit" class="btn btn-success" id="btn_recherche" value="Rechercher">
+<!--<i class="fa fa-search" aria-hidden="true"></i>-->
 </form>
 </div>
+';
+$logout='<a href="logout.php" title="logout" class="navbar-form navbar-right"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
 ';

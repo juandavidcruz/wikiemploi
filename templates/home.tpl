@@ -15,21 +15,11 @@
             {$titre}
         </div>->
         <!-- Les menus -->
-        <div id="menu" class="menu">
+        <!-- <div id="menu" class="menu">
             {$menu}
-        </div>
+        </div>-->
         <!-- Le corps -->
         <div id="contenu" class="contenu">
-            <!--{$rechercher}
-            <h1>Wiki emploi - Accueil&nbsp;</h1>
-            <p>
-                Ceci est la page d'accueil du site.
-                <br/>
-                Pour naviguer au travers de ce site, veuillez utiliser le menu à gauche qui vous permettra d'accéder aux
-                différentes informations.
-                <br/>
-                Bonne visite.
-            </p>-->
             <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
                 <div class="container">
                     <div class="navbar-header">
@@ -42,24 +32,20 @@
                     </div>
                     <div class="navbar-collapse collapse">
                         {$rechercher}
+                        {$logout}
                     </div>
                     <!--/.navbar-collapse --> </div>
             </div>
-            <div class="starter-template">
-                <h1>Welcome </h1>
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Welcome </h1>
+                </div>
             </div>
             <div class="row">
                 <div class="col-md-3">
                     <p class="text-center"><h3>Actions</h3></p>
-                    <div>
-                        <ul class="list-unstyled">
-                            <li><a class="btn btn-link" href="create_cv.html">Create a CV</a></li>
-                            <li><a class="btn btn-link" href="#lm">Publish a cover letter</a></li>
-                            <li><a class="btn btn-link" href="#ex">Search examples</a></li>
-                            <li><a class="btn btn-link" href="#obj">Go to my objects</a></li>
-                            <li><a class="btn btn-link" href="#sus">Go to my suscriptions</a></li>
-                            <li><a class="btn btn-link" href="#other">Other tools</a></li>
-                        </ul>
+                    <div class="list-unstyled">
+                        {$menu}
                     </div>
                 </div>
                 <div class="col-md-9">

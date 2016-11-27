@@ -22,3 +22,4 @@ $smarty->assign("googleplus_like_head", $googleplus_like_head);
 $smarty->assign("googleplus_like_call", $googleplus_like_call);
 $smarty->assign("googleplus_like", $googleplus_like);
 $smarty->assign("rechercher", $formulaire_recherche);
+$smarty->assign("logout", $logout);
