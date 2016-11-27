@@ -6,13 +6,18 @@
  * Date: 26/11/2016
  * Time: 17:53
  */
+
+require_once('class.dbconfig.php');
+
 class USER
 {
     private $db;
+    private $conn;
 
-    function __construct($DB_con)
+    function __construct()
     {
-        $this->db = $DB_con;
+        $this->db = new Database();
+        $this->conn = $this->db->dbConnection();
     }
 
     public function register($fname,$lname,$uname,$umail,$upass)
@@ -21,7 +26,7 @@ class USER
         {
             $new_password = password_hash($upass, PASSWORD_DEFAULT);
 
-            $stmt = $this->db->prepare("INSERT INTO utilisateur(pseudo,email,passwd) 
+            $stmt = $this->conn->prepare("INSERT INTO utilisateur(pseudo,email,passwd) 
                                                        VALUES(:uname, :umail, :upass)");
 
             $stmt->bindparam(":uname", $uname);
@@ -41,7 +46,7 @@ class USER
     {
         try
         {
-            $stmt = $this->db->prepare("SELECT * FROM utilisateur WHERE pseudo=:uname OR email=:umail LIMIT 1");
+            $stmt = $this->conn->prepare("SELECT * FROM utilisateur WHERE pseudo=:uname OR email=:umail LIMIT 1");
             $stmt->execute(array(':uname'=>$uname, ':umail'=>$umail));
             $userRow=$stmt->fetch(PDO::FETCH_ASSOC);
             if($stmt->rowCount() > 0)

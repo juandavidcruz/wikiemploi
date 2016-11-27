@@ -7,7 +7,7 @@
  */
 
 
-//require_once('session.php');
+
 
 
 if($user->is_loggedin()!="")
