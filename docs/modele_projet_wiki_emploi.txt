@@ -1,0 +1,38 @@
+Base de donnée:
+
+Table utilisateurs:
+- ID_utilisateur
+- Nom_utilisateur
+prenom_utilisateur
+- Mot de passe_utilisateur
+- mail_utilisateur
+- status_utilisateur
+- Note_utilisateur
+- fichiers_utilisateur
+
+Table liens_utilisateurs:
+id_lien_utilisateur
+- utilisateur_id1 lié à utilisateurs(id_utilisateur)
+- utilisateur_id2 lié à utilisateurs(id_utilisateur)
+- niveau_lien_utilisateur
+
+Table articles:
+- id_article
+- utilisateur_id lié à utilisateurs(id_utilisateur)
+- titre_article
+- mot_clef_article
+- texte_article
+
+Table commentaire_articles:
+- id_commentaire_article
+- utilisateur_id lié à utilisateurs(id_utilisateur)
+- article_id lié à articles(id_article)
+- Texte_commentaire_article
+
+Table wiki_articles:
+- id_wiki_article
+- titre_wiki_article
+- new_texte_wiki_article
+- old_texte_wiki_article
+- - validation_wiki_article
+- Commentaire_wiki_article

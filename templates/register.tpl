@@ -43,45 +43,51 @@
           We hope you will have a nice experience with us!</p>
       </div>
       <div class="col-sm-2">&nbsp;</div>
-      <form class="horizontal-form col-sm-8" role="form" action="#doreg">
+      <form class="horizontal-form col-sm-8" role="form" action="register.php" method="post">
         <div class="form-group"> <label for="name-input" class="col-sm-3 control-label">Name</label>
           <div class="col-sm-9"> <input class="form-control" id="name-input" placeholder="Name"
-              type="text">
+                                        name="txt_firstname"
+                                        type="text">
           </div>
         </div>
         <div class="form-group"> <label for="surname-input" class="col-sm-3 control-label">Given
             Name</label>
           <div class="col-sm-9"> <input class="form-control" id="surname-input"
-              placeholder="Given Name"
-              type="text">
+                                        placeholder="Given Name"
+                                        name="txt_lasttname"
+                                        type="text">
           </div>
         </div>
         <div class="form-group"> <label for="nickname-input" class="col-sm-3 control-label">Nickame*</label>
           <div class="col-sm-9"> <input class="form-control" id="nickname-input"
-              placeholder="Nickname"
-              type="text">
+                                        placeholder="Nickname"
+                                        name="txt_uname"
+                                        type="text">
           </div>
         </div>
         <div class="form-group"> <label for="email-input" class="col-sm-3 control-label">Email*</label>
           <div class="col-sm-9"> <input class="form-control" id="email-input" placeholder="Email"
-              type="email">
+                                        name="txt_umail"
+                                        type="email">
           </div>
         </div>
         <div class="form-group"> <label for="passwd-input" class="col-sm-3 control-label">Password*</label>
           <div class="col-sm-9"> <input class="form-control" id="passwd-input"
-              placeholder="Password"
-              type="password">
+                                        placeholder="Password"
+                                        name="txt_upass"
+                                        type="password">
           </div>
         </div>
         <div class="form-group"> <label for="passwdconf-input" class="col-sm-3 control-label">Password
             confirm*</label>
           <div class="col-sm-9"> <input class="form-control" id="passwdconf-input"
-              placeholder="Password confirm"
-              type="password">
+                                        placeholder="Password confirm"
+                                        name="txt_upass_conf"
+                                        type="password">
           </div>
         </div>
         <div class="form-group">
-          <button type="submit" class="btn btn-success">Register!</button>
+          <button type="submit" name="btn-signup" class="btn btn-success">Register!</button>
           <button type="reset" class="btn btn-danger">Cancel</button>
         </div>
       </form>

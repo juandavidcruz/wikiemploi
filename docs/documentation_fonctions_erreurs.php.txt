@@ -1,0 +1,68 @@
+Documentation wikiemploi:
+
+Les fichiers important php:
+
+admin/files/dbconf.php: Contient les éléments de connection à la base de donnée.
+admin/files/fonctions_erreurs.php: Contient les fonctions de base du site (déclaration de variables, mise en place des fonctions principales, réglages de certains paramètres du php.ini...). Ce fichier doit être inclu au début de chaque fichier php du site affichant une page.
+includes/templates_vars.php: Contient les valeurs globales des variables de templates importantes comme les balises "meta", les fichiers css et javascript, le menu...
+includes/templates_initialise.php: Contient l'initialisation des templates.
+includes/bb.php: Contient la base du parser pour le bb_code.
+js/fonctions_general.js: Contient les fonctions javascript principales du site.
+js/fonctions_admin.js: Contient les fonctions javascript spécifiques à l'administrateur du site.
+js/bb.js: Contient les fonctions javascript liées au BB codes.
+
+Variables importantes php:
+
+$DB_con: l'objet PDO pour les fonctions sur la base de donnée.
+$meta:Cette variable contient les informations des balises "meta" dans l'entête html.
+$robot: Contient la balise meta lié au informations à transmettre au robots comme "noindex" ou autres.
+$css: Contient les liens vers les fichiers CSS.
+$js: Contient les liens vers les fichiers javascript.
+$ligne_body: Contient les spécifications de la ligne d'ouverture de la balise "body" comme les instructions "onload".
+$titre: Contient le titre du site.
+$menu: Contient les éléments du menu du site.
+$foot: Contient les éléments du pied de page du site.
+$facebook_like: Contient le code pour afficher la mention j'aime de Facebook.
+$jours_text: Contient un tableau avec les noms des différents jour de la semaine, le lundi étant le premier élément.
+$mois_text: Contient un tableau des noms des mois de l'année, en commençant par le mois de janvier.
+$liste_jours: Contient les éléments html pour créer une liste "select" contenant le nom associé à un numéro des différents jours de la semaine.
+$liste_num_jours: Contient les éléments html pour créer une liste "select" contenant le numéro des différents jours du mois. Les numéros commencent par "01... jusqu'à 31".
+$liste_mois: Contient les éléments html pour créer une liste "select" contenant le nom associé à un numéro des différents mois de l'année. Les numéros commencent par "01... jusqu'à 12".
+$heures_liste: Contient les éléments html pour créer une liste "select" contenant le numéro des différentes heures dans un jour. Les numéros commencent par "00... jusqu'à 23".
+$minutes_liste: Contient les éléments html pour créer une liste "select" contenant le numéro des différentes mminutes d'une heure. Les numéros commencent par "00... jusqu'à 59".
+$url_base: Contient l'url de base du site, doit être affecté en dur à la variable dans le fichier "admin_files_fonctions_erreurs.php" avec le délimiteur "/" à la fin.
+$url_relative: Contient l'url relative, sans le nom du fichier et avec le délimiteur "/" à la fin.
+$project_name: Le nom du projet, doit être affecté en dur à la variable dans le fichier "admin_files_fonctions_erreurs.php" pour correspondre au nom du dossier de base du site, sans délimiteurs.
+$project_version: Contient la version du projet, doit être affecté en dur à la variable dans le fichier "admin_files_fonctions_erreurs.php".
+$chemin_actuel: Contient le chemin complet du fichier exécuté.
+$chemin_base: Contient le chemin précédant le nom du projet. Le délimiteur est inclue à la fin du chemin.
+$sep_rep: Contient le séparateur de répertoire, selon que le système soit un système Windows ou Unix ("\" ou "/").
+$chemin_relatif: Contient le chemin venant après le nom du projet, sans le délimiteur système final.
+$parent_back: Contient le nombre de ".." nécessaires pour remonter à la racine du site. Cela permet de simplifier l'appel à des chemins relatifs, quelque soit l'endroit où se trouve le fichier de script. Le séparateur de répertoire final est inclu.
+$templates_extention: Contient l'extention des fichiers de templates du site.
+$template_file_name: Contient le nom du fichier de template de la page.
+$smarty: C'est l'objet pour gérer les templates.
+$parser: Contient l'objet pour gérer l'affichage de BB codes.
+
+Fonctionnement global du site:
+
+Les pages sont toujours affichées en utilisant le moteur de templates Smarty. Cela repose sur un fonctionnement simple:
+- On a un fichier de script php qui définie tous les traitements liés à la page. Rien n'est affiché via cette page, pas de fonction "echo" ou autres. Par contre, on peut stocker, sans trop en abuser, du contenu html dans des variables que l'on appellera ensuite dans le fichier de template au moment où on en aura besoin.
+- On a ensuite un fichier de template qui est du html presque pure, mise à par l'appel aux variables spécifiques et aux quelques fonctions du moteur Smarty. Aucune balise "<?php ... ?>" n'est ouvrable dans ces fichiers. Le fichier de template doit être mis dans le dossier "templates" puis dans une arborescence représentant celle du fichier de script appelant à partir de la base du site. Il doit également avoir le même nom que le fichier de script appelant, avec l'extention définie par la variable prévue à cette effet (ici c'est ".tpl").
+- Pour finir, on a le template compilé dans le dossier "templates_c". Là aussi, l'arborescence du script doit être représenté pour que le template fonctionne. Par contre, le fichier sera créé tout seul, pas besoin d'en créer un, seul l'arborescence des dossiers est importante. Une tentative de création de l'arborescence sera tenté via le script mais si elle échoue elle devra être créée à la main.
+
+Et maintenant une description de l'arborescence du site:
+- admin: Les pages d'administration du site.
+- admin/files: Les fichiers de fonctions administrateur du site où bien des fonctions sencibles.
+- css: Les fichiers de feuille de style.
+- docs: De la documentation diverse. Ce dossier sera retiré du site final.
+- img: Les images qui seront incluent par la suite. Ce dossier sera un dossier d'upload organisé.
+- includes: Les fichiers d'inclusion globale mais peu sencible comme l'initialisation des templates.
+- js: Les scripts Javascript.
+- libs: Les librairies utilisées comme Smarty ou JBBCode.
+- sql: Les scripts sql de création de tables et autres. Ce dossier sera retiré du site final.
+- templates: Les fichiers de templates du site.
+- templates_c: Les templates compilés.
+
+Notes pour le design:
+
