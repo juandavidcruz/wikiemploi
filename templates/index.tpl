@@ -11,16 +11,16 @@
 <div id="superglobal">
     <div id="global">
         <!-- L'en-tête -->
-        <div id="en_tete" class="en_tete">
+        <!--<div id="en_tete" class="en_tete">
             {$titre}
-        </div>
+        </div>->
         <!-- Les menus -->
-        <div id="menu" class="menu">
+        <!--<div id="menu" class="menu">
             {$menu}
-        </div>
+        </div>-->
         <!-- Le corps -->
         <div id="contenu" class="contenu">
-            {$rechercher}
+            <!--{$rechercher}
             <h1>Wiki emploi - Accueil&nbsp;</h1>
             <p>
                 Ceci est la page d'accueil du site.
@@ -29,7 +29,7 @@
                 différentes informations.
                 <br/>
                 Bonne visite.
-            </p>
+            </p>-->
             <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
                 <div class="container">
                     <div class="navbar-header">
@@ -38,7 +38,7 @@
                             <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span>
                             <span class="icon-bar"></span> <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="#">Social CV project</a>
+                        <a class="navbar-brand" href="#">Wiki emploi</a>
                     </div>
                     <div class="navbar-collapse collapse">
                         <form class="navbar-form navbar-right" role="form" action="login.php"

@@ -6,13 +6,14 @@
  * Time: 16:55
  */
 
-require_once 'dbconfig.php';
+include('admin/files/fonctions_erreurs.php');
+$page_description='<meta name="description" content="Se connecter">';
+// inclusion des variables de templates et initialisation de celui-ci
 
-require './libs/smarty/Smarty.class.php';
+include($parent_back . 'includes/templates_initialise.php');
 
-$smarty = new Smarty;
 
-if($user->is_loggedin()!="")
+if(isset($user) && $user->is_loggedin()!="")
 {
     $user->redirect('home.php');
 }
@@ -71,6 +72,6 @@ else if(isset($_POST['btn-signup']))
 }
 else
 {
-    $smarty->display('register.tpl');
+    $smarty->display($template_file_name);
 }
 
