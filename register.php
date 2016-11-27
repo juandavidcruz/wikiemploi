@@ -7,11 +7,14 @@
  */
 
 include('admin/files/fonctions_erreurs.php');
+require_once('includes/class.dbconfig.php');
+require_once('includes/class.user.php');
 $page_description='<meta name="description" content="Se connecter">';
 // inclusion des variables de templates et initialisation de celui-ci
 
 include($parent_back . 'includes/templates_initialise.php');
 
+$user = new USER();
 
 if(isset($user) && $user->is_loggedin()!="")
 {
@@ -19,8 +22,10 @@ if(isset($user) && $user->is_loggedin()!="")
 }
 else if(isset($_POST['btn-signup']))
 {
+    $db = new Database();
+    $conn = $db->dbConnection();
 
-    $uname = trim($_POST['txt_uname']);
+    $uname = trim($_POST['txt_umail']);
     $umail = trim($_POST['txt_umail']);
     $upass = trim($_POST['txt_upass']);
 
@@ -43,14 +48,14 @@ else if(isset($_POST['btn-signup']))
     {
         try
         {
-            $stmt = $DB_con->prepare("SELECT pseudo, email FROM utilisateur WHERE pseudo=:uname OR email=:umail");
-            $stmt->execute(array(':uname'=>$uname, ':umail'=>$umail));
+            $stmt = $conn->prepare("SELECT mail_utilisateur FROM utilisateurs WHERE mail_utilisateur=:umail");
+            $stmt->execute(array(':umail'=>$umail));
             $row=$stmt->fetch(PDO::FETCH_ASSOC);
 
-            if($row['user_name']==$uname) {
+            /*if($row['user_name']==$uname) {
                 $error[] = "sorry username already taken !";
             }
-            else if($row['user_email']==$umail) {
+            else */if($row['mail_utilisateur']==$umail) {
                 $error[] = "sorry email id already taken !";
             }
             else

@@ -128,7 +128,7 @@ $formulaire_recherche='<div id="rechercher" name="rechercher">
 </label>
 <br/>
 <label for="lst_type_recherche">Recherche dans:
-<select id="lst_type_recherche" name="lst_type_recherche">
+<!--<select id="lst_type_recherche" name="lst_type_recherche">
 <option value="1">Demandes d\'aide</option>
 <option value="2">Articles du wiki</option>
 
@@ -140,8 +140,8 @@ $formulaire_recherche='<div id="rechercher" name="rechercher">
 
 </select>
 </label>
-<br/>
-<input type="submit" id="btn_recherche" value="Rechercher">
+<br/>-->
+<input type="submit" id="btn_recherche" value="Rechercher"><i class="fa fa-search" aria-hidden="true"></i>
 </form>
 </div>
 ';
