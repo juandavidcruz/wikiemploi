@@ -1,0 +1,43 @@
+I) Mettre en place ces pages:
+
+index.php:
+- Texte de la page d'accueil à définir
+- Le login ou l'inscription d'un utilisateur ne se fera pas via cette page
+
+login_page:
+- Page permettant de se connecter au site avec un lien vers la page "register.php" pour s'enregistrer
+
+register.php:
+- Permettra d'enregistrer un nouvel utilisateur et d'accéder à la page "login_page.php"
+
+demandes_aide.php
+- texte de cette page et fonctionnalités de cette page à définir
+
+wiki.php:
+- Fonctionnalités de cette page: tuto, liens utils, conseils rh
+- Texte de cette page à définir
+
+acount.php:
+- Fonctionnalités de cette page pour tous les utilisateurs du site: se déconnecter, mon profile, ma liste d'amis, mes messages privés, mes fichiers, mes articles/demande d'aides, modifier mon mot de passe, se désinscrir
+- Fonctionnalités spécifiques aux modérateurs: espace de modération
+- Fonctionnalités spécifique aux administrateurs: espace de modération, espace de gestion du site, sauvegarder/restaurer
+- Texte de cette page à définir
+
+qui_sommes_nous.php:
+- Texte de cette page à définir
+
+II) Suggestions:
+
+- Compléter la mise en place de la base de donnée.
+- Rédiger les différentes descriptions de page, mots clés et autres informations à mettre dans les balises "meta" du site pour son futur référencement.
+- Le menu étant assez peu fourni en l'état, nous pourrions imaginer créer un menu déroulant permettant d'accéder aux différentes fonctionnalités de certaines page. Dans ce cas, il faudra faire très attention à l'accessibilité du menu et également définir un menu alternatif pour les navigateurs n'autorisant pas le Javascript.
+- Un bouton de modification de la taille du texte pourrait être implémenté pour les utilisateurs mal-voyant ou pour des appareils de petite taille.
+- Prévoir un accès spécifique aux administrateurs du site leur permettant de tout gérer (ajout/modification/suppression d'utilisateurs, de fichiers, de messages, de tutoriels/aides, de wikis...).
+- Prévoir une fonction de sauvegarde/restauration de la base de donnée et des différents fichiers qui pourrait être modifiés ou ajoutés sur le site.
+- Prévoir l'envoi d'E-mails automatisés pour les modérateurs du site lorsqu'un tuto/wiki/commentaire est ajouté/modifié permettant ainsi d'accepter ou de refuser dirrectement la modification. Il faudra aussi prévoir un espace permettant de gérer ces aspects de la modération dirrectement via le site pour les administrateurs et les modérateurs.
+- Prévoir la possibilité de s'abonner aux différents tuto/wiki/demande d'aides pour être notifié lorsqu'une modification général est faites ou un nouveau commentaire est posté ou modifié. La notification pourrait se faire par mail mais peut-être aussi via des flux RSS.
+- Prévoir la possibilité de banir les utilisateurs ne respectant pas la charte du site.
+- Prévoir une fonction de capcha pour la page d'inscription d'un utilisateur. Là encore, attention à l'accessibilité de cette fonctionnalité.
+- Prévoir un moyen assez simple pour ajouter différentes mises en forme sur les textes de demandes d'aide/tuto/commentaires comme le soulignement, la mise en évidence, la sitation mais aussi l'ajout de liens, d'images et de vidéos.
+- Prévoir un tchat dans les pages de demandes d'aide/tuto/wiki.
+- Si nous hébergeons les images et les vidéos, prévoir un algorithme pour convertir les liens de celles-ci pour refléter l'arborescence de stockage. Par exemple, un utilisateur mets un tutoriel avec une vidéo, hébergée sur son compte youtube en premier lieu. Après modération, nous souhaitons garder cette vidéo donc nous l'hébergeons sur le compte Youtube du site mais le lien ne sera donc plus le même. Il faudra alors convertir celui-ci pour le mettre à jour et de manière automatique. Idem pour les images, si nous proposons à l'utilisateur d'ajouter une image dirrectement sur le serveur, il ne saura pas quel lien il devra mettre pour l'afficher à l'endroit voulu dans son tuto donc il faudra lui permettre d'avoir une facilité d'accès à cette informations ou sinon, de la même manière que la vidéo, l'utilisateur héberge son image, la modération valide, l'image est copiée sur le serveur puis le lien est mis à jour dans le tuto. A réfléchir...
