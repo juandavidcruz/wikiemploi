@@ -2,6 +2,7 @@ DROP TABLE IF EXISTS commentaires_aide;
 DROP TABLE IF EXISTS aides;
 DROP TABLE IF EXISTS commentaires_article;
 DROP TABLE IF EXISTS articles;
+DROP TABLE IF EXISTS private_messages
 DROP TABLE IF EXISTS liens_utilisateurs;
 DROP TABLE IF EXISTS utilisateurs;
 
@@ -42,6 +43,8 @@ private_message_id_utilisateur_1 INT NOT NULL,
 private_message_id_utilisateur_2 INT NOT NULL,
 titre_private_message VARCHAR(100) NOT NULL,
 texte_private_message TEXT NOT NULL,
+date_ajout_private_message DATETIME NOT NULL,
+date_last_modification_private_message DATETIME NOT NULL,
 CONSTRAINT fk_private_message_id_utilisateur_1 FOREIGN KEY (private_message_id_utilisateur_1) REFERENCES utilisateurs(id_utilisateur) ON DELETE CASCADE ON UPDATE CASCADE,
 CONSTRAINT fk_private_message_id_utilisateur_2 FOREIGN KEY (private_message_id_utilisateur_2) REFERENCES utilisateurs(id_utilisateur) ON DELETE CASCADE ON UPDATE CASCADE
 )
