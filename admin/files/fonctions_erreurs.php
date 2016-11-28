@@ -21,6 +21,8 @@ $project_name='wikiemploi';
 $project_version='0.0.1';
 // extention des fichiers de templates
 $templates_extention=".tpl";
+// url de base du site, avec le délimiteur
+$url_base='http://localhost/wikiemploi/';
 // variables de templates
 $meta="";
 $page_description='';
@@ -95,8 +97,6 @@ $liste_nb_elements='<label for="lst_nb_elements">Nombre d\'éléments par page:
 // global $project_name, $project_version, $chemin_actuel, $chemin_base, $sep_rep, $chemin_relatif, $parent_back;
 // Ces variables peuvent être appelée dans des fonctions avec le mot clé "global" au moment de leur déclaration, comme présenté ci-dessus ou à voir plus bas dans ce fichier, fonction ecrire_fichier().
 
-// url de base du site, avec le délimiteur
-$url_base='http://localhost/wikiemploi/';
 // déclaration de la variable pour obtenir l'url relative, sera modifiée par programmation ensuite
 $url_relative='';
 // récupération du chemin courant
