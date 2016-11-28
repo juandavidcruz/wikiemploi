@@ -26,12 +26,24 @@ ENGINE=InnoDB;
 
 CREATE TABLE liens_utilisateurs(
 id_lien_utilisateur INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-utilisateur_id_1 INT NOT NULL,
-utilisateur_id_2 INT NOT NULL,
+lien_utilisateur_id_utilisateur_1 INT NOT NULL,
+lien_utilisateur_id_utilisateur_2 INT NOT NULL,
 lv_lien_utilisateur int(1) NOT NULL DEFAULT 1,
 accept_lien_utilisateur int(1) NOT NULL DEFAULT 0,
-CONSTRAINT fk_utilisateur_id_1 FOREIGN KEY (utilisateur_id_1) REFERENCES utilisateurs(id_utilisateur) ON DELETE CASCADE ON UPDATE CASCADE,
-CONSTRAINT fk_utilisateur_id_2 FOREIGN KEY (utilisateur_id_2) REFERENCES utilisateurs(id_utilisateur) ON DELETE CASCADE ON UPDATE CASCADE
+accept_private_message_lien_utilisateur int(1) NOT NULL DEFAULT 0,
+CONSTRAINT fk_lien_utilisateur_id_utilisateur_1 FOREIGN KEY (lien_utilisateur_id_utilisateur_1) REFERENCES utilisateurs(id_utilisateur) ON DELETE CASCADE ON UPDATE CASCADE,
+CONSTRAINT fk_lien_utilisateur_id_utilisateur_2 FOREIGN KEY (lien_utilisateur_id_utilisateur_2) REFERENCES utilisateurs(id_utilisateur) ON DELETE CASCADE ON UPDATE CASCADE
+)
+ENGINE=InnoDB;
+
+CREATE TABLE private_messages(
+id_private_message INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+private_message_id_utilisateur_1 INT NOT NULL,
+private_message_id_utilisateur_2 INT NOT NULL,
+titre_private_message VARCHAR(100) NOT NULL,
+texte_private_message TEXT NOT NULL,
+CONSTRAINT fk_private_message_id_utilisateur_1 FOREIGN KEY (private_message_id_utilisateur_1) REFERENCES utilisateurs(id_utilisateur) ON DELETE CASCADE ON UPDATE CASCADE,
+CONSTRAINT fk_private_message_id_utilisateur_2 FOREIGN KEY (private_message_id_utilisateur_2) REFERENCES utilisateurs(id_utilisateur) ON DELETE CASCADE ON UPDATE CASCADE
 )
 ENGINE=InnoDB;
 
