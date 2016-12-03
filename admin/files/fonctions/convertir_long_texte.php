@@ -1,10 +1,10 @@
 <?php
-function retirer_bb_texte($text, $bb_code_name) {
-	$pos_ouverture=strpos($text, '[' . $bb_code_name);
+function retirer_html_texte($text, $html_code_name) {
+	$pos_ouverture=strpos($text, '<' . $html_code_name . '>');
 	if ($pos_ouverture!==false) {
-		$pos_fermeture=strpos($text, '[/' . $bb_code_name . ']');
-		$text=substr_replace($text, ' ', $pos_ouverture, ($pos_fermeture+strlen('[/' . $bb_code_name . ']'))-$pos_ouverture);
-		retirer_bb_texte($text, $bb_code_name);
+		$pos_fermeture=strpos($text, '</' . $html_code_name . '>');
+		$text=substr_replace($text, ' ', $pos_ouverture, ($pos_fermeture+strlen('</' . $html_code_name . '>'))-$pos_ouverture);
+		retirer_bb_texte($text, $html_code_name);
 	}
 	return($text);
 }
